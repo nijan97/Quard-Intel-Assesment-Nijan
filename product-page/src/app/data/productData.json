@@ -1,24 +1,34 @@
 {
-    "images": [
-      {
-        "src": "/assets/prod-img1.png",
-        "alt": "Product Image 1"
-      },
-      {
-        "src": "/assets/prod-img2.png",
-        "alt": "Product Image 2"
-      },
-      {
-        "src": "/assets/prod-img3.png",
-        "alt": "Product Image 3"
-      },
-      {
-        "src": "/assets/prod-img4.png",
-        "alt": "Product Image 4"
-      },
-      {
-        "src": "/assets/prod-img5.png",
-        "alt": "Product Image 5"
-      }
-    ]
+  "images": [
+    {
+      "src": "/assets/prod-img1.png",
+      "alt": "Product Image 1"
+    },
+    {
+      "src": "/assets/prod-img2.png",
+      "alt": "Product Image 2"
+    },
+    {
+      "src": "/assets/prod-img3.png",
+      "alt": "Product Image 3"
+    },
+    {
+      "src": "/assets/prod-img4.png",
+      "alt": "Product Image 4"
+    },
+    {
+      "src": "/assets/prod-img5.png",
+      "alt": "Product Image 5"
+    }
+  ],
+  "sizes": [
+    "X-Small",
+    "Small",
+    "Medium",
+    "Large",
+    "XL",
+    "2XL"
+  ],
+  "productDetails": "To ensure the longevity of the exterior coat, we strongly advise following the care instructions provided, which include washing the item inside out using a gentle cycle with cold water and air drying.\n73% polyester, 27% spandex\nMachine wash cold\nDo not bleach\nDo not tumble dry\nDo not iron\nImported.",
+  "sizeAndFit": "7/8 - 25\" inseam\nSmooth elastic band in the high waistband for stay-put power\nSoft second skin feel\nMoisture wicking properties\nFit is true-to-size but is intentionally very compressive\n4-way stretch ensures freedom of movement\nNon-see-through fabric (squat proof)"
 }
