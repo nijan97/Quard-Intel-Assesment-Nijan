@@ -51,7 +51,7 @@ const ImageGrid = ({ images }) => {
             ))}
           </Slider>
           {/* Fixed counter at the top-right corner */}
-          <div className="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded-lg">
+          <div className="absolute top-[16px] right-[16px] px-3 py-1 rounded-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-md text-white text-base font-medium">
             {currentSlide + 1} of {images.length}
           </div>
         </div>
