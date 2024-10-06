@@ -1,0 +1,24 @@
+{
+    "images": [
+      {
+        "src": "/assets/prod-img1.png",
+        "alt": "Product Image 1"
+      },
+      {
+        "src": "/assets/prod-img2.png",
+        "alt": "Product Image 2"
+      },
+      {
+        "src": "/assets/prod-img3.png",
+        "alt": "Product Image 3"
+      },
+      {
+        "src": "/assets/prod-img4.png",
+        "alt": "Product Image 4"
+      },
+      {
+        "src": "/assets/prod-img5.png",
+        "alt": "Product Image 5"
+      }
+    ]
+}
