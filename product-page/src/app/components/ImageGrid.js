@@ -1,4 +1,4 @@
-"use client"; // This component is client-side
+"use client"; 
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -8,29 +8,30 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ImageGrid = ({ images }) => {
-  const [mounted, setMounted] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0); // Track current slide index
+  const [mounted, setMounted] = useState(false);  // Track if component is mounted
+  const [currentSlide, setCurrentSlide] = useState(0);  // Track current slide index
 
   // Detect if the screen width is below 768px (mobile view)
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
+  // Ensure the component only renders after it's mounted on the client
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    return null;
+    return null;  // Prevent rendering until client-side mounting is done
   }
 
   // Slick carousel settings for mobile view
   const settings = {
-    infinite: false, // Stop infinite scrolling
+    infinite: false,  // Stop infinite scrolling
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: true, // Enables left/right arrows
-    afterChange: (current) => setCurrentSlide(current), // Update slide index when slide changes
+    arrows: true,  // Enables left/right arrows
+    afterChange: (current) => setCurrentSlide(current),  // Update slide index when slide changes
   };
 
   return (
@@ -39,7 +40,7 @@ const ImageGrid = ({ images }) => {
         <div className="relative">
           <Slider {...settings}>
             {images.map((image, index) => (
-              <div key={index} className="relative w-full h-[400px] overflow-hidden rounded-2xl">
+              <div key={index} className="relative w-full h-[500px] overflow-hidden rounded-2xl">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -51,7 +52,7 @@ const ImageGrid = ({ images }) => {
             ))}
           </Slider>
           {/* Fixed counter at the top-right corner */}
-          <div className="absolute top-[16px] right-[16px] px-3 py-1 rounded-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-md text-white text-base font-medium">
+          <div className="absolute top-[20px] right-[20px] px-3 py-1 rounded-full bg-black bg-opacity-60 backdrop-filter backdrop-blur-md text-white text-sm font-medium">
             {currentSlide + 1} of {images.length}
           </div>
         </div>

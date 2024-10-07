@@ -1,5 +1,6 @@
-"use client";
-import React from 'react';
+"use client"; 
+
+import React, { useEffect, useState } from 'react';
 import ImageGrid from './components/ImageGrid';
 import ChooseSize from './components/ChooseSize';
 import QuantityAndAddToCart from './components/AddToCart';
@@ -8,6 +9,17 @@ import productData from './data/productData.json';
 
 const Page = () => {
   const { images, sizes, productDetails, sizeAndFit } = productData;
+  
+  const [mounted, setMounted] = useState(false);  // New state to check if the component is mounted
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // If not mounted, return null to prevent rendering on server
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="max-w-screen-xl mx-auto my-10 px-4 md:px-16">
@@ -29,7 +41,7 @@ const Page = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-primary-900 text-4xl font-medium mt-6 mb-6">
+          <h1 className="text-primary-900 text-3xl md:text-4xl font-medium mt-6 mb-6">
             Slimming Nocturnal Leopard 7/8
           </h1>
 
